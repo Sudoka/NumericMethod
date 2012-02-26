@@ -1,0 +1,5 @@
+Problem 3
+For Put
+Strike = 115, Volatility = NaN
+Strike = 120, Volatility = 0.4254
+

@@ -1,0 +1,4 @@
+1. all max_error output
+2. true function, 4, 32
+3. qualitative aspect of the approximation  (?)
+4. 
