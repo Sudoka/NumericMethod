@@ -1,0 +1,20 @@
+function [ va ] = fcdf( t, X, Y, H, S )
+global Phi0 Phi1 Psi0 Psi1;
+
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+if t <= X(1) 
+    va = Y(1);
+else
+    if t >= X(size(X,2)) 
+        va = Y(size(X,2));
+    else
+        i = get_index(t,X);  
+        z = (t - X(i)) ./ H(i);
+        va = Y(i) .* Phi0(z) + Y(i+1) .* Phi1(z) + S(i) .* H(i).* Psi0(z) + S(i+1) .* H(i) .* Psi1(z);
+    end
+end
+end
+
+
+
